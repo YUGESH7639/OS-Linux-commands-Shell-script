@@ -757,8 +757,9 @@ esac
  ## OUTPUT
  ![Alt text](img/screen62.png)
  
-cat > whiletest
-```bash
+cat > whiletest.sh
+```
+bash
 #!/bin/bash
 #while command test
 var1=10
@@ -771,9 +772,10 @@ done
  chmod 755 whiletest.sh
  
  ./whiletest.sh
+ ## OUTPUT 
+ ![Alt text](img/screen63.png)
  
- 
-cat untiltest.sh 
+cat > untiltest.sh 
 ```bash
 \#using the until command
 var1=100
@@ -785,7 +787,7 @@ done
 ``` 
  chmod 755 untiltest.sh
  
- 
+
  
 cat > forin1.sh 
 ```bash
@@ -812,7 +814,7 @@ done
  
  chmod 755 forin2.sh
  
-cat forin2.sh 
+cat > forin2.sh 
 ```bash
 \#!/bin/bash
 \# another example of how not to use the for command
@@ -836,7 +838,7 @@ done
 ```
 $ ./forin3.sh 
  
-cat forin1.sh 
+cat>forin1.sh 
 ```bash
 #!/bin/bash
 # basic for command
@@ -848,18 +850,10 @@ done
 $ chmod 755 forin1.sh
 
 ## OUTPUT
-cat forinfile.sh 
-```bash
-#!/bin/bash
-# reading values from a file
-file="cities"
-for state in `cat $file`
-do
-echo "Visit beautiful $file“
-done
-```
-$ chmod 777 forinfile.sh
-$ cat cities
+![Alt text](img/screen64.png)
+
+
+$ cat  > cities
 Hyderabad
 Alampur
 Basara
@@ -868,8 +862,10 @@ Adilabad
 Bhadrachalam
 Khammam
 
-## OUTPUT
+cat cities
 
+## OUTPUT
+![Alt text](img/screen65.png)
 
 cat > forctype.sh 
 ```bash
@@ -880,11 +876,12 @@ do
 echo "The value of i is $i"
 done
 ````
-$ chmod 755 forctype.sh
-$ ./forctype.sh 
+ chmod 755 forctype.sh
+ ./forctype.sh 
 ## OUTPUT
+![Alt text](img/screen66.png)
 
-cat forctype1.sh 
+cat  > forctype1.sh 
 ```bash
 #!/bin/bash
 # multiple variables
@@ -893,9 +890,10 @@ do
 echo "$a - $b"
 done
 ```
-$ chmod 755 forctype.sh
+$ chmod 755 forctype1.sh
 $ ./forctype1.sh 
 ## OUTPUT
+![Alt text](img/screen67.png)
 
 cat > fornested1.sh 
 ```bash
@@ -914,7 +912,7 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
-
+![Alt text](img/screen68.png)
  
 cat  > forbreak.sh 
 ```bash
@@ -930,32 +928,12 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-## OUTPUT
 
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
- 
-cat forbreak.sh 
-```bash
-#!/bin/bash
-# breaking out of a for loop
-for var1 in 1 2 3 4 5
-do
-if [ $var1 -eq 3 ]
-then
-continue
-fi
-echo "Iteration number: $var1"
-done
-echo "The for loop is completed“
-```
-
- 
-$ chmod 755 forcontinue.sh
- 
-$ ./forcontinue.sh 
 ## OUTPUT
+![Alt text](img/screen69.png)
  
 cat  > exread.sh 
 ```bash
@@ -970,7 +948,7 @@ $ chmod 755 exread.sh
  
 $ ./exread.sh 
 ## OUTPUT
-
+![Alt text](img/screen70.png)
 
  cat > exread1.sh
 ```bash
@@ -980,12 +958,13 @@ read -p "Enter your name: " name
 echo "Hello $name, welcome to my program. “
 ``` 
 $ chmod 755 exread1.sh 
+$ ./exread1.sh 
 
 ## OUTPUT
 
+![Alt text](img/screen71.png)
 
 
-$ ./exread1.sh 
  
 cat > funcex.sh
 ```bash
@@ -1002,12 +981,13 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
-## OUTPUT
  ./funcex.sh 
 
  
  ./funcex.sh 1 2
+## OUTPUT
 
+![Alt text](img/screen72.png)
  
 cat > argshift.sh
 ```bash
@@ -1018,9 +998,9 @@ cat > argshift.sh
 done
 ```
 $ chmod 777 argshift.sh
-
-## OUTPUT
 $ ./argshift.sh 1 2 3
+## OUTPUT
+![Alt text](img/screen73.png)
  
  cat  > argshift1.sh
 ```bash
@@ -1035,11 +1015,12 @@ for (( i=0;i<$ELEMENTS;i++)); do
     echo ${args[${i}]} 
 done
 ```
-$ chmod 777 argshift.sh
+$ chmod 777 argshift1.sh
+$ ./argshift1.sh 1 2 3
 ## OUTPUT
-$ ./argshift.sh 1 2 3
+![Alt text](img/screen74.png)
  
-cat  > argshift.sh
+cat  > argshift2.sh
 ```bash
 #!/bin/bash 
 set -x 
@@ -1049,9 +1030,10 @@ while (( "$#" )); do
 done
 set +x
 ```
+./argshift.sh 1 2 3
 ## OUTPUT
- ./argshift.sh 1 2 3
  
+ ![Alt text](img/screen75.png)
  
 cat > nc.awk
 ```bash
@@ -1067,6 +1049,9 @@ print "Number of Lines are",NR
 print "No of Words count:",wordcount
 }
  ```
+ ## OUTPUT
+![Alt text](img/screen76.png)
+
 cat>data.dat
 ```bash
 bcdfghj
@@ -1082,7 +1067,8 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+ ![Alt text](img/screen77.png)
+
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1108,8 +1094,13 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
+
+chmod 777 palindrome.sh
+
+./palindrome.sh
 ## OUTPUT 
 
+![Alt text](img/screen78.png)
 
 # RESULT:
 The Commands are executed successfully.
